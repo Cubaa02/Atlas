@@ -1,11 +1,8 @@
-// Get the 'staty' element
 const staty = document.getElementById('staty');
 
-// Get the sorting dropdown
 const selectSort = document.getElementById('selSort');
 
 function fetchDataAndRender(continent, sortBy) {
-    // Clear the content of the 'staty' div
     staty.innerHTML = '';
 
     fetch(`https://restcountries.com/v3.1/region/${continent}`)
@@ -16,7 +13,6 @@ function fetchDataAndRender(continent, sortBy) {
             return response.json();
         })
         .then((data) => {
-            // Sort the data according to the selected criterion
             data.sort((a, b) => {
                 if (sortBy === 'name') {
                     const nameA = a.translations.ces ? a.translations.ces.common : a.name.official;
@@ -66,5 +62,4 @@ selectSort.addEventListener('change', function() {
     fetchDataAndRender(selectedContinent, sortBy);
 });
 
-// Load data for the default value when the page loads
 fetchDataAndRender(selectContinent.value, selectSort.value);
