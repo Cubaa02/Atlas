@@ -129,5 +129,5 @@ p {
 }
 
 :root{
-    --bs-card-bg: #fff0;
+    --bs-card-bg: transparent;
 }
