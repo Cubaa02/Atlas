@@ -129,5 +129,5 @@ p {
 }
 
 :root{
-    --bs-card-bg: var(#000000);
+    --bs-card-bg: #fff0;
 }
