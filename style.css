@@ -42,6 +42,10 @@ body{
     transform-origin: 50% 50%;
 }
 
+.card:focus {
+   border: none !important;
+}
+
 @keyframes scaledown {
     0% {
         -webkit-transform: scale(1.1);
@@ -128,6 +132,3 @@ p {
     opacity: 0.5;
 }
 
-:root{
-    --bs-card-bg: transparent;
-}
